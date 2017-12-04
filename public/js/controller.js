@@ -1,7 +1,7 @@
 var app = angular.module('mainApp', []);
 app.controller('people', function ($scope, $http) {
-
-    $http.get("https://vast-headland-18946.herokuapp.com/router")
+    //my http link https://vast-headland-18946.herokuapp.com/router
+    $http.get("http://localhost:3000/router")
         .success(function (response) {
             $scope.persons = response;
             
@@ -19,11 +19,11 @@ app.controller('people', function ($scope, $http) {
 
 
 
-            $http.post("https://vast-headland-18946.herokuapp.com/router", $scope.data).success(function (res) {
+            $http.post("http://localhost:3000/router", $scope.data).success(function (res) {
 
                console.log(data);
-                $scope.data = "";
-            })
+                $scope.data = " ";
+            });
 
         }
 
